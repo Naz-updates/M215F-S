@@ -134,6 +134,7 @@ void show_system_info(char *dataframe, int *idx)
 	*idx += (1 + sizeof(sensor_debug_info) * count + sizeof(system_debug_info));
 
 	ssp_info("==system info ===");
+	int i = 0;
 	for (i = 0; i < count; ++i) {
 		info = (sensor_debug_info *)dataframe;
 		ssp_info("id(%d), total(%d), external(%d), e_sampling(%d), e_report(%d), fastest(%d)",
